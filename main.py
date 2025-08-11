@@ -143,7 +143,7 @@ async def lifespan(app: FastAPI):
         pinecone_index = pinecone_client.Index(index_name)
         
         # Initialize OpenAI client
-        logger.info("Initializing OpenAI GPT-5...")
+        logger.info("Initializing OpenAI gpt-5-mini...")
         openai_client = OpenAI(
             api_key=os.getenv("OPENAI_API_KEY")
         )

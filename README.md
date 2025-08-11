@@ -1,7 +1,7 @@
 # 🚀 HackRx Enhanced RAG API
 
 An **Enhanced Retrieval-Augmented Generation (RAG)** system for processing **insurance policy and legal PDFs**.  
-Built with **FastAPI**, **LangChain**, **SentenceTransformers**, **PostgreSQL + pgvector**, **Pinecone**, and **OpenAI GPT** for accurate, context-grounded answers.
+Built with **FastAPI**, **LangChain**, **SentenceTransformers**, **PostgreSQL + pgvector**, **Pinecone**, and **OpenAI gpt-5-mini** for accurate, context-grounded answers.
 
 ---
 
@@ -27,7 +27,7 @@ Built with **FastAPI**, **LangChain**, **SentenceTransformers**, **PostgreSQL + 
 | **Embeddings**             | SentenceTransformers (`all-MiniLM-L6-v2`) |
 | **Database**               | PostgreSQL + `pgvector` |
 | **Vector Store**           | Pinecone        |
-| **LLM**                    | OpenAI GPT (configurable) |
+| **LLM**                    | OpenAI gpt-5-mini (configurable) |
 | **Auth**                   | HTTP Bearer     |
 | **Environment Management** | python-dotenv   |
 
@@ -35,9 +35,13 @@ Built with **FastAPI**, **LangChain**, **SentenceTransformers**, **PostgreSQL + 
 
 ## 📂 Project Structure
 
-├── main.py # FastAPI application with routes and services
-├── requirements.txt # Python dependencies
-└── README.md # Project documentation
+```bash
+├── main.py
+├── README.md
+├── requirements.txt
+└── report
+    └── Pitch Desk.pdf
+```
 
 ---
 
@@ -159,7 +163,7 @@ Authorization: Bearer YOUR_TOKEN
    Queries both PostgreSQL and Pinecone to fetch the most relevant chunks.
 
 6. **LLM Answering**  
-   Passes retrieved context + question to **OpenAI GPT model** → returns concise, factual answers.
+   Passes retrieved context + question to **OpenAI gpt-5-mini model** → returns concise, factual answers.
 
 ---
 
